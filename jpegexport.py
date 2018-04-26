@@ -69,7 +69,7 @@ class JPEGExport(inkex.Effect):
     def effect(self):
         """get selected item coords and call command line command to export as a png"""
 
-        if not self.options.path
+        if not self.options.path:
             svg = self.document.getroot()
             docnameWithExtension = svg.get(inkex.addNS('docname', u'sodipodi'))
             docname = docnameWithExtension.split('.')[0]
